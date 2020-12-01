@@ -94,7 +94,7 @@ def _dict_cleanup(dic, dict_type=dict):
 # Embarrassing!
 def annotate(address, text, confidence=0.0, support=0,
              spotter='LingPipeSpotter', disambiguator='Default',
-             policy='whitelist', headers=None):
+             policy='whitelist', headers=None, verify=True):
     """
     Annotate a text.
 
@@ -155,7 +155,7 @@ def annotate(address, text, confidence=0.0, support=0,
         raise SpotlightException('Oops. Looks like you forgot the protocol '
                                  '(http/https) in your url (%s).' % address)
 
-    response = requests.post(address, data=payload, headers=reqheaders)
+    response = requests.post(address, data=payload, headers=reqheaders, verify=verify)
     if response.status_code != requests.codes.ok:
         # Every http code besides 200 shall raise an exception.
         response.raise_for_status()
@@ -176,7 +176,7 @@ def annotate(address, text, confidence=0.0, support=0,
 # the return line being the difference haha.
 def candidates(address, text, confidence=0.0, support=0,
              spotter='LingPipeSpotter', disambiguator='Default',
-             policy='whitelist', headers=None):
+             policy='whitelist', headers=None, verify=True):
     """
     Get the candidates from a text.
 
@@ -189,7 +189,7 @@ def candidates(address, text, confidence=0.0, support=0,
                'policy': policy, 'text': text}
     reqheaders = {'accept': 'application/json'}
     reqheaders.update(headers or {})
-    response = requests.post(address, data=payload, headers=reqheaders)
+    response = requests.post(address, data=payload, headers=reqheaders, verify=verify)
     if response.status_code != requests.codes.ok:
         # Every http code besides 200 shall raise an exception.
         response.raise_for_status()
