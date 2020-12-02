@@ -1,5 +1,8 @@
-Fork of pyspotlight
-
+Fork of pyspotlight: 
+    
+    ubergrape/pyspotlight
+    https://github.com/ubergrape/pyspotlight
+    
 ===========
 pyspotlight
 ===========
