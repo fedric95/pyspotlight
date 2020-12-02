@@ -1,13 +1,10 @@
-
-
-Maintenance of this repository has stopped. You can find a new, maintained, version at https://github.com/aolieman/pyspotlight
-
+Fork of pyspotlight
 
 ===========
 pyspotlight
 ===========
 
-is a thin python wrapper around `DBpedia Spotlight`_'s `REST Interface`_.
+This is a thin python wrapper around `DBpedia Spotlight`_'s `REST Interface`_.
 
 The tested DBpedia Spotlight versions are 0.5 and 0.6.5, though it seems to also work with 0.7 as confirmed by some users.
 As long as there are no major API overhauls, this wrapper might also
@@ -21,15 +18,6 @@ Spotlight 0.5 etc.
 
 .. _`DBpedia Spotlight`: https://github.com/dbpedia-spotlight/dbpedia-spotlight#dbpedia-spotlight
 .. _`REST Interface`: https://github.com/dbpedia-spotlight/dbpedia-spotlight/wiki/Web-service
-
-Installation
-============
-
-The newest stable release can be found on the `Python Package Index (PyPi) <https://pypi.python.org/pypi>`__.
-
-Therefore installation is as easy as::
-
-    pip install pyspotlight
 
 Requirements for installation from source/github
 ================================================
